@@ -1,0 +1,80 @@
+.testimonials {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "a a b c"
+    "d e e c ";
+  gap: 3rem;
+}
+
+.card-1 {
+  grid-area: a;
+  background-color: $color-moderate-violet;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  .card {
+    &__heading-h {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+.card-2 {
+  grid-area: b;
+  background-color: $color-dark-blue;
+}
+.card-3 {
+  grid-area: d;
+  background-color: $color-white;
+}
+.card-4 {
+  grid-area: e;
+  background-color: $color-vdark-blue;
+}
+.card-5 {
+  grid-area: c;
+  background-color: $color-white;
+}
+
+.quotes {
+  position: absolute;
+  display: flex;
+  font-size: 40rem;
+  color: $color-lightgray-blue;
+  top: -14rem;
+  left: 60%;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+@media only screen and (max-width: 1300px) {
+  html {
+    font-size: 50%;
+  }
+  .testimonials {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  html {
+    font-size: 62.5%;
+  }
+  .testimonials {
+    width: 80%;
+    grid-template-areas: "a a a a" "b b b b" "d d d d" "e e e e" "c c c c";
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+  }
+  main {
+    height: auto;
+    padding: 5rem 0;
+  }
+  .quotes {
+    font-size: 30rem;
+    top: -10rem;
+  }
+}

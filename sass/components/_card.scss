@@ -1,0 +1,72 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 4rem;
+  border-radius: 1rem;
+  font-family: "Barlow Semi Condensed";
+  box-shadow: 1rem 1rem 5rem rgba($color-black, 0.2);
+  &__img-and-name {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+  &__image img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px $color-lightgray-blue;
+  }
+  .card {
+    &__name {
+      &-position {
+        font-size: 1.8rem;
+        color: rgba($color-white, 0.5);
+      }
+    }
+  }
+  &__text {
+    color: $color-white;
+    opacity: 0.7;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  &__heading-h {
+    color: $color-white;
+    font-weight: 600;
+  }
+  &__name {
+    &-name {
+      color: rgba($color-white, 0.81);
+    }
+  }
+}
+
+.card-1 {
+  .card__name {
+    &-name {
+      color: rgba($color-white, 0.81);
+    }
+  }
+}
+
+.card-3,
+.card-5 {
+  .card {
+    &__name {
+      &-name {
+        color: rgba($color-black, 1);
+      }
+      &-position {
+        font-size: 1.8rem;
+        color: rgba($color-black, 0.5);
+      }
+    }
+    &__heading-h {
+      color: $color-black;
+    }
+    &__text {
+      color: $color-black;
+    }
+  }
+}
